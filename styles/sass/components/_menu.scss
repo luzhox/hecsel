@@ -1,0 +1,306 @@
+#masthead{
+    width: 100%;
+    min-height: 60px;
+    position: fixed;
+    top:0;
+    z-index: 9999999;
+    margin-top: 00px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background:white;
+    box-shadow: 0px 5px 40px $grisClaro;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    @include tablet{
+        
+    }
+    @include desktop{
+  
+    height: 70px;
+
+    &.active{
+        height: 70px;
+        background:$primary;
+         .container {
+          
+        
+            .logo{
+                display: inline-block;
+                
+                img{
+                    // margin-top: 11px!important;
+                    height: 70px !important;
+                    margin-top: 0px;
+
+
+                }
+            }
+            .container-nav{
+            
+                margin-top: 15px;
+            
+            }
+        
+        }
+    }
+    
+    }
+
+    .phone-contact{
+        
+        position: absolute;
+        top:20px;
+        right: 60px;
+
+        @include desktop{
+            position: initial;
+            float: right;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        }
+        a{
+            color:white;
+            background-color: $primary;
+            border-radius: 6px;
+            padding: 10px;;
+            @include desktop{
+                background-color: #fff;
+                color:$primary;
+
+            }
+
+        }
+        p{
+            display: none;
+            color:$primary;
+            font-size: 16px;
+            margin-left:10px;
+            line-height: normal;
+            @include desktop{
+                display: block;
+            }
+        }
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color:rgba(0, 0, 0, 0.6);
+        transition: ease-in-out .3s;
+        display:none;
+    }
+    .container{
+        z-index: 30;
+        position: relative;
+        min-height: 60px;
+        padding: 0px;
+        width: 100%;
+        @include desktop{
+            padding: 0 col(2, 31);
+            width: 100%;
+
+        }
+        .container-logo{
+            width: col(27,37);
+            float: left;
+            padding-left:  col(2, 31);
+            @include tablet{
+                padding-left: 0px;
+            }
+            
+            @include desktop{
+                width:col(4,27);
+                height: 100%;
+                padding-left: 0px;
+                float:initial;
+                display: inline-block;
+                vertical-align: middle;
+
+               
+            }
+            .logo{
+                display: inline-block;
+                img{
+                    // margin-top: 10px;
+                  
+                    height: 48px;
+                    margin-top: 5px;
+                    @include tablet{
+                          height: 50px;
+
+                        margin-left: 20px;
+
+                    }
+                    @include desktop{
+                        height: 70px;
+
+                        margin-left: 0px;
+
+                        // margin-top: 35px;
+                        height: 100%;
+                        // max-height: 45px;
+                        max-height: 180px;
+
+                    }
+                }
+            }
+        }
+        .container-nav{
+            
+            height: 0px;
+             opacity: 0;
+             position: relative;
+             z-index: 0;
+             clear: both;
+             overflow: hidden;
+             transition: ease-in-out .3s;
+             margin-top: 10px;
+            @include desktop{
+                clear: initial;
+                height: auto;
+                opacity: 1;
+                margin-left: col(1,27);
+                display: inline-block;
+                vertical-align: middle;
+                margin-top:0px;
+            }
+         
+            .main-navegation{
+                ul{
+                    padding-top: 10px;
+                    @include tablet{
+                        padding-top:0px;
+                    }
+                    li{
+                        border-top: 1px solid $grisClaro;
+                        list-style: none;
+                        text-align: center;
+                        border-bottom:1px solid white;
+                        transition: ease-in-out .3s all;
+                        @include tablet{
+                            border:0px;
+                        } a{
+                            color:$gris;;
+                            padding: 10px 20px;
+                            display: inline-block;
+                            width: 100%;
+                            font-size: 16px;
+                            @include tablet{
+                                display: initial;
+                                width: auto;
+                            }
+                        
+                        }
+                        &:hover{
+                            border-bottom:1px solid $primary;
+
+                        }
+                        &.current_page_item{
+                            border-bottom:1px solid $primary;
+                            a{
+                                color:$primary;
+
+                            }
+                          
+                        }
+                    }
+                }
+              @include tablet{
+                ul{
+                    li{
+                        list-style: none;
+                        text-align: left;
+                        padding: 0px!important;
+                        padding-bottom:5px!important;
+                        color:$grisOscuro;
+                        @include tablet{
+                            display:inline-block;
+                            margin:0 ;
+                            
+                        }
+                        a{
+                            color:$gris;
+                            transition: ease-in-out  .3s all;
+                            padding: 20px 10px;
+                            display: inline-block;
+                            width: 100%;
+                            @include tablet{
+                                display: initial;
+                                width: auto;
+                            }
+                        
+                            &:hover{
+                                border-bottom: 1px solid #F6B114;
+
+                            }
+                        }
+                    
+                    }
+                }
+
+              }
+               
+               
+            }
+            &.active{
+                width: 100%;
+                margin-top: 70px;
+                clear: both;
+                height: 100%;
+                opacity: 1;
+                text-align: center;
+                z-index: 80;
+
+                nav{
+
+                    div{
+                        ul{
+                            padding-bottom: 20px;
+                            li{
+                                border-top: 1px solid $grisClaro;
+                                @include tablet{
+                                    border:0px;
+                                }
+
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sandwich{
+
+            float: right;
+            width: col(10,37);
+            text-align: right;
+            padding-top: 20px;
+            font-size: 20px;
+            transition: ease-in-out .3s;
+            padding-right: col(2, 37);
+            @include tablet{
+                padding-right: col(1, 31);
+
+
+            }
+            
+            @include desktop{
+                display:none;
+            }
+            a{
+                color:$primary;
+                transition: ease-in-out .3s;
+
+            }
+        }
+    }
+}

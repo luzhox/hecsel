@@ -1,0 +1,98 @@
+footer.site-footer {
+  background-color: $grisOscuro;
+  color: white;
+  padding: 20px 0px;
+  display: block;
+
+  .container {
+    min-height: 60px;
+    margin: 0px auto;
+    clear: both;
+    padding: col(2, 37);
+    @include tablet {
+      padding: 0 col(1, 31);
+    }
+
+    .context {
+      width: col(27, 27);
+      display: flex;
+      align-items: center;
+      flex-flow: wrap;
+      justify-content: center;
+      @media only screen and (min-width: 700px) {
+        width: col(27, 27);
+        text-align: left;
+        justify-content: flex-start;
+      }
+      img {
+        height: 45px;
+        width: auto;
+        @include desktop {
+          width: col(4, 29);
+          margin-right: col(5, 29);
+          height: auto;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: normal;
+        text-align: center;
+        color: #ffffff;
+        @include tablet {
+          font-size: 16px;
+        }
+      }
+      .terms-con {
+        margin: 20px 0;
+        text-align: center;
+        @include tablet{
+          margin: 20px auto;
+
+        }
+        @include desktop {
+          width: col(9, 29);
+          margin-right: col(5, 29);
+        }
+      }
+      h4 {
+        color: white;
+        font-weight: 300;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+        @include desktop {
+          text-align: left;
+          margin-top: 0px;
+        }
+      }
+      .redes {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+        @include desktop {
+          width: col(6, 29);
+        }
+        p {
+          margin-bottom: 0px;
+          margin-right: 20px;
+
+          @include desktop {
+            margin-bottom: 0px;
+          }
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 32px;
+          @include desktop {
+            font-size: 45px;
+          }
+          &:nth-child(2) {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}

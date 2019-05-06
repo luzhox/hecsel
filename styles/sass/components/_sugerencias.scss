@@ -1,0 +1,123 @@
+.sugerencias {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+  
+    .container {
+      padding-top: col(4, 37);
+      padding-bottom: col(4, 37);
+  
+      @include tablet {
+        padding-top: $sectionmargin;
+        padding-bottom: $sectionmargin;
+      }
+  
+      .content-sugerencias {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+  
+        .card-sugerencias {
+          width: col(29, 29);
+          min-height: 145px;
+          margin-bottom: 20px;
+          background-color: white;
+          margin-left: auto;
+          margin-right: auto;
+          justify-content: flex-start;
+          align-items: center;
+          overflow: hidden;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          -ms-transition: all .3s ease-in-out;
+          -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+          position: relative;
+          border:1px solid $grisClaro;
+          border-radius: 8px;
+          
+          .imagen {
+            width: 100%;
+            height: auto;
+   
+            img {
+              width: 100%;
+              height: auto;
+          
+            }
+          }
+          div.text {
+            width: col(12, 12);
+            padding-left: col(1, 9);
+            padding-right: col(1, 9);
+            padding-top: col(0.25, 9);
+            position: absolute;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-flow: column;
+            background: #ec7a0095;
+            height: 100%;
+            bottom:0;
+       
+            @include desktop{
+                height: 60px;;
+                background: white;
+
+            }
+            
+
+            h3 {
+              text-align: left;
+              font-size: 24px;
+              margin-bottom: 24px;
+              text-align: center;
+              color: white;
+              @include tablet{
+                font-size: 20px;
+
+              }
+              @include desktop{
+                font-size: 24px;
+                color:$grisOscuro;
+              }
+            }
+            span{
+                color:$primary;
+                background:white;
+                display: block;
+                padding: 10px 20px;
+                border-radius: 8px;
+                display:block;
+
+                @include desktop{
+                    display: none;
+                }
+            }
+          }
+          &:hover{
+            div.text{
+                background: #ec7a00cd;
+                height: 100%;
+                bottom:0;
+               
+                h3{
+                    color: white;
+                }
+                span{
+                    display: block;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+  

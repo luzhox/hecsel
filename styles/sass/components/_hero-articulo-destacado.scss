@@ -1,0 +1,64 @@
+.hero-articulo-destacado {
+  text-align: center;
+  height: 80vh;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: $grisOscuro;
+  @media only screen and (min-width: 769px) {
+    background-position: left bottom !important;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    -ms-flex-flow: column;
+    padding-top: 12.5vh;
+
+    @media only screen and (min-width: 700px) {
+      padding-top: 25vh;
+    }
+
+    h1 {
+      color: $grisOscuro;
+      font-size: calc(25px + 24 * ((100vw - 320px) / 820));
+      text-align: center;
+      display: inline;
+
+      @media only screen and (min-width: 769px) {
+        max-width: col(16, 31);
+        text-align: left;
+
+        font-size: calc(20px + 24 * ((100vw - 320px) / 820));
+      }
+      em {
+        color: $primary;
+        font-weight: 900;
+      }
+    }
+    p {
+      color: $grisOscuro;
+    }
+
+    a {
+      display: block;
+      color: white;
+      background-color: $primary;
+      padding: 20px 50px;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 40px auto;
+
+      &:hover {
+        background-color: $primaryHover;
+      }
+      @media only screen and (min-width: 700px) {
+        margin: 0;
+        margin-top: 36px;
+      }
+    }
+  }
+}

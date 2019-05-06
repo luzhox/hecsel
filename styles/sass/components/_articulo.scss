@@ -1,0 +1,347 @@
+#articulo {
+  line-height: 24px;
+  font-size: 16px;
+  text-align: justify;
+  font-weight: 400;
+margin-top:50px;
+@include tablet{
+  margin-top:70px;
+
+
+}
+  .size-full {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .container {
+    display: flex;
+
+    flex-flow: column;
+
+    @include tablet {
+      flex-flow: wrap;
+    }
+  }
+
+  .wp-block-image {
+    margin-top: 1em;
+  }
+  .texto-articulo {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 400;
+    color: #747474;
+  }
+  h1 {
+    width: 100%;
+    text-align: left;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom:20px;
+
+    @include tablet {
+      font-size: 38px;
+      line-height: 120%;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 28px;
+    line-height: 120%;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 120%;
+    }
+  }
+ 
+
+  p {
+    line-height: 130%;
+    font-size:16px;
+    text-align: justify;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+    @include tablet{
+      font-size: 20px;
+
+
+    }
+  }
+  strong {
+    font-weight: 700;
+    color: $grisOscuro;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .wp-block-quote {
+    font-size: 24px;
+    line-height: 30px;
+    display: inline-block;
+    font-weight: 700;
+    color: $grisOscuro;
+
+    &::before {
+      content: "";
+      color: $primary;
+      font-weight: 700;
+      display: inline-block;
+    }
+  }
+
+  .wp-block-image {
+    figure {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .wp-block-quote {
+    display: block;
+    margin: 0px 0px;
+  }
+  .wp-block-quote p {
+    color: #242a2d;
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 300;
+    max-width: 500px;
+    font-family: $primary-text;
+    @include tablet{
+      font-size: 24px;
+
+    }
+  }
+  .wp-block-quote p::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    font-weight: 300;
+    background-image: url(../images/comillas.png);
+    background-size: 60%;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $primary;
+    font-size: 28px;
+    @include tablet{
+      background-size: 80%;
+      margin-right: 10px;
+
+    }
+  }
+
+  .wp-block-quote p::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/comillas2.png);
+    background-size: 60%;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $primary;
+    font-size: 28px;
+    @include tablet{
+      background-size: 80%;
+      margin-left: 10px;
+
+
+    }
+  }
+
+  .imagen {
+    width: 100vw;
+    height: 250px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: bottom center !important;
+    @include tablet {
+      height: 400px;
+      background-position: center !important;
+    }
+  }
+  .container {
+    margin-bottom: col(2, 31);
+    padding-top: col(1, 27);
+
+    .post {
+      width: col(37, 37);
+
+      @include desktop {
+        width: col(16, 27);
+        margin-right: col(2, 27);
+        float: left;
+      }
+
+      .textos {
+        .profile {
+          width: col(16, 16);
+          height: 50px;
+          margin-bottom: 20px;
+
+          @include desktop {
+            width: col(7, 16);
+          }
+          .img {
+            width: 50px;
+            height: 100%;
+            float: left;
+            border-radius: 50%;
+            margin-right: 20px;
+            background-image:url('../images/icono-blog.png');
+            background-position: center center;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-color:$primary;
+          }
+          p {
+            padding-top: 12.5px;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    .aside {
+      width: col(37, 37);
+      min-height: 300px;
+      margin-top: 30px;
+
+      @include tablet {
+        margin: 0px;
+        width: col(9, 27);
+        float: left;
+      }
+
+      .noticia-referida {
+        height: 205px;
+        width: 100%;
+        position: relative;
+        background-size: cover !important;
+        background-size: center !important;
+        display: flex;
+        align-items: flex-end;
+        transition: ease-in-out 0.3s all;
+        margin-bottom: 50px;
+
+        p {
+          font-size: 25px;
+          text-align: center;
+          color: white;
+          width: 100%;
+          z-index: 9999;
+          position: relative;
+          margin-bottom: 20px;
+          font-weight: 900;
+          display: block;
+          width: 100%;
+        }
+
+       
+        .btn-white {
+          padding: 10px 20px;
+          background: $primary;
+          color: white;
+          text-align: center;
+          display: none;
+        }
+        .overlay {
+          width: 100%;
+          height: 70px;
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+74 */
+          background: -moz-linear-gradient(
+            top,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.65) 74%,
+            rgba(0, 0, 0, 0.65) 100%
+          ); /* FF3.6-15 */
+          background: -webkit-linear-gradient(
+            top,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.65) 74%,
+            rgba(0, 0, 0, 0.65) 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.65) 74%,
+            rgba(0, 0, 0, 0.65) 100%
+          ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+        }
+        &:hover {
+          flex-flow: column;
+          justify-content: center;
+          .overlay {
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+          }
+          align-items: center;
+          .btn-white {
+            display: block;
+            max-width: 100px;
+            border-radius: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+      h3{
+        margin-bottom: 20px;
+      }
+      .ultimasnoticias {
+        .noticia {
+          width: 100%;
+          height: 120px;
+          margin-bottom: 20px;
+          border: 1px solid $grisClaro;
+
+          .image-noticia {
+            width: col(3, 8);
+            height: 100%;
+            padding: 10px;
+            float: left;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+          }
+          .texto-noticia {
+            float: left;
+            padding: 12px;
+            height: 100%;
+            width: col(5, 8);
+            p {
+              font-size: 16px;
+              font-weight: 120%;
+            }
+            a {
+              font-weight: 900;
+              display: inline;
+              color: $grisOscuro;
+              transition: ease-in-out 0.3s all;
+              &:hover {
+                text-decoration: underline;
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.body-noticias {
+  width: 100% !important;
+}

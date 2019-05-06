@@ -1,0 +1,314 @@
+.especificaciones {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+
+    .container {
+      padding-top: col(4, 37);
+      padding-bottom: col(4, 37);
+  
+      @include tablet {
+        padding-top: $sectionmargin;
+        padding-bottom: $sectionmargin;
+      }
+      .pisos{
+        z-index: 1;
+      }
+      .content-especificaciones{
+          display: flex;
+          flex-flow: wrap;
+
+          .muestras-pisos{
+            width:col(29,29);
+            min-height: 250px;
+            background: $primary;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-flow: wrap;
+            padding: 8px;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: col(1,29);
+
+            @include tablet{
+              max-width: 600px;
+              display: flex;
+              min-height: 300px;
+              margin: 20px auto;
+              margin-top: 0;
+            }
+            @include desktop{
+              width:col(16,29);
+              margin-right: col(1,29);
+              min-height: 400px;
+              margin: 0;
+              margin-bottom: 0px;
+              max-width: 100%;
+            }
+            .pisos{
+
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              width: auto;
+              height: 100%;
+              .item-piso-textura{
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -ms-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                &.active{
+                  opacity: 1;
+                }
+              
+              // img{
+              //   width: auto;
+              //   height: 100%;
+              //   @include tablet{
+              //     height: 150%;
+
+              //   }
+              //   @include desktop{
+              //     height: 100%;
+              //   }
+              // }
+            }
+            }
+            .codigo-content{
+              width: 25%;
+              background-color: #fff;
+              position: absolute;
+              right: 0px;
+              top: 40px;
+              border-radius: 8px 0px 0px 8px;
+              line-height: normal;
+              display: flex;
+              flex-flow: wrap;
+              align-items: flex-end;
+              padding:0px 10px;
+              z-index: 20;
+
+              @include tablet{
+                padding: 10px 30px;
+
+              }
+          
+                
+                p{
+                  color: #242a2d;
+                  font-size: 14px;
+                  font-weight: 700;
+
+                  @include tablet{
+                    font-size: 18px;
+
+                  }
+                }
+            }
+            .card-muestras{
+              width: 100%;
+              border-radius: 9px;
+              position: relative;
+              z-index: 20;
+
+                .contenedor-colors{
+                  background: #fff;
+                  width: 100%;
+                  display: flex;
+                  flex-flow: wrap;
+                  border-radius: 8px;
+                  justify-content: center;
+                  padding: 10px 20px;
+                  align-items: center;
+              
+                  p{
+                    font-size: 16px;
+                    line-height: normal;
+                    color: #242a2d;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    @include tablet{
+                      text-align: left;
+                      width: 30%;
+                      margin-bottom: 0px;
+
+
+                    }
+                  }
+                  .colores-pisos{
+                    text-align: center;
+                    width: 100%;
+                    @include tablet{
+                      text-align: right;
+                      width: 70%;
+
+                    }
+
+                  .color{
+                    background: #D7CABD;
+                    border: 2px solid #FFFFFF;
+                    box-sizing: border-box;
+                    display:inline-block;
+                    width: 20px;
+                    height: 20px; 
+                    border-radius: 50%;
+                    cursor: pointer;
+                    @include tablet{
+                      width: 30px;
+                      height: 30px; 
+                    }
+
+                    @include desktop{
+                      border: 5px solid #FFFFFF;
+
+                      width: 40px;
+                      height: 40px; 
+                    }
+                  }
+                  }
+                }
+            }
+
+          }
+          .caracteristicas-pisos{
+            width:col(29,29);
+            @include tablet{
+              max-width:600px;
+              margin: 0 auto;
+            }
+            @include desktop{
+              max-width: 100%;
+              width:col(12,29);
+
+            }
+          
+
+              .caracteristicas-principales{
+                border:1px solid $grisClaro;
+                border-radius: 8px;
+                padding-left:col(1,12);
+                padding-right:col(1,12);
+                padding-top:col(1,12);
+                padding-bottom:col(1,12);
+                @include desktop{
+                  padding-top:col(0.75,12);
+                  padding-bottom:col(0.75,12);
+                }
+             
+
+                  .item-caracteristicas{
+                      display: flex;
+                      flex-flow: row;
+                      margin-bottom:20px;
+                      align-items: center;
+                      
+                      &:nth-child(3){
+                        margin-bottom:0px;
+
+                      }
+                      .imagen{
+                        height:30px;
+                        @include tablet{
+                        height: 40px;
+                        }
+                        img{
+                            height: 30px;
+                            width: auto;
+
+                            @include tablet{
+                              height: 40px;
+                              width: auto;
+                            }
+                        }
+                      }
+                      .text{
+                          p{
+                              font-size: 14px;
+                              margin-left:20px;
+                              line-height: 120%;
+                              color:$gris;
+
+                              @include tablet{
+                                font-size: 16px;
+
+                              }
+
+                          }
+
+
+                      }
+                  }
+              }
+          }
+          .detalle{
+            width: 100%;
+            height: 190px;
+            border-radius: 8px;
+            border:1px solid $grisClaro;
+            margin-top: col(0.5,12);
+            display: flex;
+            align-items: center;
+            justify-content: center;;
+            flex-flow: column;
+            h5{
+            font-size:20px;
+            line-height: normal;
+            text-align: center;
+            letter-spacing: 0.4px;
+            margin-bottom: 20px;
+
+            @include tablet{
+              font-size: 26px;
+
+
+            }
+            }
+            a{
+              background:$primary;
+              border: 1px solid $primary;
+              box-sizing: border-box;
+              color: #fff;
+              font-size: 16px;
+              text-align: center;
+              display: inline-block;
+              width: col(8,12);
+              padding: 20px 0px;
+              border-radius: 8px;
+              margin:0 auto;
+              margin-top: 5px;
+              font-weight: 700;
+              -webkit-transition: all .3s ease-in-out;
+              -moz-transition: all .3s ease-in-out;
+              -ms-transition: all .3s ease-in-out;
+              -o-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out;
+              @include tablet{
+                font-size: 18px;
+
+              }
+              &:hover{
+                background: $primaryHover;
+                border-color: $primaryHover;
+                box-shadow: 0px 0px 10px $primaryHover;;
+
+              }
+            }
+          }
+
+      }
+    }
+  }
+  

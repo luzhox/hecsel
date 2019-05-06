@@ -1,0 +1,12 @@
+.hero-map {
+  width: 100%;
+  height: 400px;
+  background-color: $gris;
+  @include tablet {
+    margin-top: 50px;
+  }
+  @include desktop{
+    margin-top: 70px;
+
+  }
+}

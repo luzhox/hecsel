@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+
 	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png">
 	<title><?php wp_title(''); ?> <?php if(wp_title('',false)){echo':';} ?> <?php bloginfo('name') ?></title>
 	<meta name="theme-color" content="#ec6a03"/>
@@ -26,19 +28,17 @@
 					</a>
 				</div>
 				<div class="sandwich">
-				
-					<a class="icon-menu-1" href="#" ></a>
+					<div class="menu menu-1"></div>
+					<div class="menu menu-2"></div>
+					<div class="menu menu-3"></div>
 				</div>
+				
 				<div class="container-nav">
 					<nav id="site-navegation" class="main-navegation" role="navegation">
 						<?php wp_nav_menu(array('theme_location'=>'menu_principal')); ?>
 					</nav>
 				</div>
-				<div class="phone-contact">
-					<a href="tel:+51<?php echo esc_html(get_option('numero_mayo')); ?>"><i class="icon-phone"></i></a>
-					<p><?php echo esc_html(get_option('numero_mayo')); ?></p>
-					
-				</div>
+			
 
 			</div>
 		</header>

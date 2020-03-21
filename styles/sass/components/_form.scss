@@ -4,17 +4,17 @@
   background-repeat: no-repeat;
   width: 100%;
   min-height: 500px;
-  border-top:1px solid $grisClaro;
   .container {
     .form-mayo {
       display: flex;
-      flex-flow: wrap;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
       .formulario {
         width: col(37, 37);
 
         @include desktop {
           width: col(15, 27);
-          margin-right: col(2, 27);
         }
 
         .group-form-2 {
@@ -35,8 +35,8 @@
           }
         }
         .btn-form {
-          background: $primary;
-          border: 1px solid $primary;
+          background: $yellow;
+          border: 1px solid $yellow;
           box-sizing: border-box;
           color: white;
           font-size: 18px;
@@ -60,8 +60,8 @@
           appearance: none;
           -webkit-appearance: none;
           &:hover {
-            background-color: $primaryHover;
-            box-shadow: 0px 0px 10px $primaryHover;;
+            background-color: $yellow;
+            box-shadow: 0px 0px 10px $yellow;;
     
           }
         }
@@ -80,11 +80,16 @@
       @include desktop{
         width: col(10, 27);
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
       .dato {
         display: flex;
         flex-flow: wrap;
         margin-bottom: col(1, 10);
+        max-width: 220px;
+
        @include tablet{
          width: col(14,29);
          margin-bottom: 0;
@@ -95,47 +100,47 @@
         align-items: flex-start;
         justify-content: flex-start;
         margin-bottom: col(1, 10);
-
        }
 
         &:nth-child(2) {
           margin-bottom: 0px;
         }
         .icono {
-          color: $primary;
+          color: $yellow;
           font-size: 46px;
           margin-right: col(0.75, 10);
         }
         .text {
           h4 {
             font-weight: 900;
-            font-size: 20px;
+            font-size: 24px;
             line-height: normal;
             letter-spacing: 0.4px;
-            color: $grisOscuro;
+            color: $gray;
             font-family: $primary-text;
+            letter-spacing: -0.6px;
             @include desktop {
               font-size: 24px;
             }
           }
           p {
             font-weight: 300;
-            font-size: 18px;
+            font-size: 26px;
             line-height: normal;
             letter-spacing: 0.4px;
-            font-family: $secondary-text;
-            color: $grisOscuro;
+            font-family: $primary-text;
+            color: $gray;
             @include desktop {
               font-size: 26px;
             }
           }
           a {
-            color: $primary;
+            color: $yellow;
             margin: 10px 0px;
             text-decoration: underline;
           }
           span {
-            color: $gris;
+            color: $gray2;
             display: inline-block;
             margin-left: 12px;
             @include desktop {

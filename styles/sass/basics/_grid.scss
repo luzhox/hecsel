@@ -45,16 +45,16 @@ $breakpoint-desktop: 1240px;
 }
 
 .container{
-    max-width: 1350px;
+    max-width: 296px;
     margin: 0 auto;
-    padding: 0 col(2, 37);
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: initial;
     // @include clearfix;
     @include tablet{
-        padding: 0 col(2, 31);
- 
+        padding: 0 col(1, 37);
+        max-width: 1184px;
+        box-sizing: border-box;
     }
     
  

@@ -1,30 +1,25 @@
 
 @charset "UTF-8";
 
-@import 'basics/generics';
-@import 'components/menu';
-@import 'components/footer';
-@import 'components/articulo';
-@import 'components/articulos';
-@import 'components/hero-principal';
-@import 'components/hero-categoria';
-@import 'components/hero-pisos';
-@import 'components/que-es';
-@import 'components/marcas';
-@import 'components/clientes';
-@import 'components/nuestros-productos';
-@import 'components/pisos-productos';
-@import 'components/form';
-@import 'components/mapa';
-@import 'components/control-pagination';
-@import 'components/beneficios';
-@import 'components/sugerencias';
-@import 'components/especificaciones';
-@import 'components/ficha-producto';
-@import 'components/ficha-multiproducto';
-
-
-
+@import 'basics/_generics';
+@import 'basics/_typo';
+@import 'basics/_buttons';
+@import 'components/_menu';
+@import 'components/_articulo';
+@import 'components/_articulos';
+@import 'components/_form';
+@import 'components/_maps';
+@import 'components/_miembros-hecsel';
+@import 'components/_twitter';
+@import 'components/_modal';
+@import 'components/_footer';
+@import 'components/_products-home';
+@import 'components/_projects-home';
+@import 'components/_service-home';
+@import 'components/_nosotros-home';
+@import 'components/_sponsors';
+@import 'components/_hero';
+@import 'components/enginer-solutions'
 
 
 

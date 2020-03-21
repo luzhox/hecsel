@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 <style>
 #menu-item-172{
-
 	border-bottom:1px solid #e4a513!important;
-    padding-bottom: 5px;
+	padding-bottom: 5px;
 }
-
 </style>
 <div id="articulo" >
 			<?php while(have_posts() ): the_post(); ?>
@@ -17,19 +15,15 @@
 			<div class="post">
 				<div class="textos">
 					<h1 data-aos="fade-up" data-aos-offset="100"><?php the_title();?></h1>
-						<div class="profile" data-aos="fade-up" data-aos-offset="100">
-							<div class="img" ></div>
-							<p>Escrito por: Mayo </p>
-						</div>
 					<div class="texto-articulo" data-aos="fade-up" data-aos-offset="100"><?php the_content();?></div>
 				</div>
 			</div>
 
 			<div class="aside">
+			<h3 class="title">Artículos Recientes</h3>
 
-			<?php if( get_field('existe_noticia_destacada') ): ?>
 
-			<?php $noticia = get_field('noticia_destacada'); 
+			<?php $noticia = get_field('articulo_destacados'); 
 			    if( $noticia ): ?>
 					<a href="<?php echo $noticia['url']?>">
 					<div class="noticia-referida" data-aos="fade-up" data-aos-offset="100" style="background:url(<?php echo $noticia['imagen']?>)">
@@ -39,14 +33,7 @@
 					</div>
 				</a>
 				<?php endif; ?>
-
-					
-	
-	
-	<?php endif; ?>
-					<h3 class="title">Post Recientes</h3>
 					<div class="ultimasnoticias">
-
 					<?php $args = array(
 						 'posts_per_page'=> 3,
             'orderby'=> 'date',
@@ -57,7 +44,6 @@
 
 				  <?php while($family->have_posts()): $family->the_post();?>
 					<div class="noticia" data-aos="fade-up" data-aos-offset="100">
-						<div class="image-noticia" style="background:url(<?php echo $url; ?>)"></div>
 						<div class="texto-noticia">
 							<p><?php excerpt('10');?></p>
 							<a href="<?php the_permalink()?>">Ver más</a>

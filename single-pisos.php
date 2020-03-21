@@ -1,6 +1,4 @@
-<?php
-    
-    get_header(); ?>
+<?php get_header(); ?>
   <body <?php body_class(); ?>>
   <?php
   while ( have_posts() ) { the_post();
@@ -11,11 +9,8 @@
       the_modules_loop()&&the_module('post');
 
     } else {
-
       the_module('post');
-
     }
-
   }
   ?>
 

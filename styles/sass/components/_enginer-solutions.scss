@@ -1,0 +1,98 @@
+.enginer-solutions{
+    @include tablet{
+        padding-top: 64px;
+        margin-bottom: 72px;
+        border-top:1px solid #C4C4C4;
+    }
+    .container{
+        padding-bottom: 64px;
+        @include tablet{
+            padding:0px col(3,37);
+        }
+        h2{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 120%;
+            color: $gray;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            li{
+                display: inline-block;
+                margin-right: 16px;
+                button{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 120%;
+                    color:$gray;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+                &.active{
+                    button{
+                        border-bottom:2px solid $yellow;
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+      
+       
+    }  
+   &_carousel{
+       &__slide{
+        display: flex!important;
+        flex-flow: wrap;
+        justify-content: space-between;
+        .text{
+            width: 100%;
+            margin-bottom: 32px;
+            letter-spacing: 0.4px;
+            p{
+                font-size: 16px;
+                line-height: 160%;
+                letter-spacing: 0.4px;
+                color:$gray2;
+                text-align: center;
+            }
+        }
+        .products{
+            display: flex!important;
+            flex-flow: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .product{
+            @include tablet{
+                width: col(7,31);
+                margin-right: col(1,31);
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+            .img{
+                min-height: 260px;
+                img{
+                width: 100%;
+                height: auto;
+            }
+            }
+            
+            p{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 120%;
+                color:$gray;
+                text-align: center;
+                margin-top: 4px;
+            }
+        }
+       }
+   }
+}

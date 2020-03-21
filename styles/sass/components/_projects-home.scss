@@ -1,0 +1,147 @@
+.projects-home{
+    text-align: center;
+    padding: 48px 0px;
+    border-top: 1px solid #cecece;
+    margin-top: 32px;
+    background-color: $gray;
+    h2.title p{
+        color: white;
+        strong{
+            color: $yellow;
+        }
+    }
+    .section-title{
+        color:white;
+    }
+    &.whitever{
+        background-color: #fff;
+        h2.title p{
+            color:$gray;
+            strong{
+                color: $gray;
+                font-weight: 600;
+            }
+        }
+        .section-title{
+            color:$gray;
+        }
+        h3.title p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 140%;
+            font-family: $roboto;  
+            margin-top: 16px; 
+            strong{
+                font-weight: 600;
+            }
+        }
+    }
+    @include tablet{
+        border: 0px;
+        margin-top: 0px;
+        padding: 0px;
+    }
+  
+  
+    a{
+        margin-top: 32px;
+        @include tablet{
+            margin-top: 64px;
+        }
+    }
+    .container{
+        padding-left: 0px;
+        padding-right: 0px;
+        @include mobile{
+            max-width: 312px;
+        }
+    }
+    &__container{
+        width: col(29,37);
+        margin: 0 auto;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+       
+        .owl-dots{
+            margin-top: 24px!important;
+            @include desktop{
+                margin-top: 32px!important;
+            }
+        }
+        .owl-stage-outer{
+            overflow: initial!important;
+        }
+        .owl-stage{
+            margin: 0 auto;
+        }
+        &__item{
+            display: flex;
+            flex-flow: wrap;
+            cursor: pointer;
+            overflow: hidden;
+            align-items: flex-end;
+            background: #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 16px;
+            position: relative;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            height: 192px;
+            text-align: left;
+            @include tablet{
+                width: 360px;
+                margin-right: col(1,29);
+            }
+            &:hover{
+                box-shadow: 0px 4px 48px rgba(156, 161, 186, 0.24);
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+            h3{
+                text-align: right;
+                color: white;
+               p{
+                font-family: $primary-text!important;
+                padding: 0px 36px;
+                font-size: 18px;
+                line-height: 100%;
+                letter-spacing: -1px;
+                color: white;
+                text-align: left;
+                text-transform: uppercase;
+                font-weight: 700!important;
+                strong{
+                    font-weight: 700!important;
+                    display: block;
+                }
+               }
+            } 
+            span{
+                font-size: 12px;
+                line-height: 156%;
+                margin-left: 36px;
+                text-transform: uppercase;
+                padding:4px 16px;
+                margin-top: 16px;
+                border-radius: 4px;
+            }
+            .text{
+                position: relative;
+                z-index: 2;
+                margin-bottom: 36px;
+            }
+            .overlay{
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #0E0E0E 89.58%);
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

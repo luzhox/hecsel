@@ -1,65 +1,43 @@
 <?php
-
-
-
-
-
-require('inc/opciones.php');
-
-require('lib/helpers.php');
-
-
-
-
-add_action( 'after_setup_theme', function() {
-
+  require('inc/opciones.php');
+  require('lib/helpers.php');
+  add_action( 'after_setup_theme', function() {
   add_theme_support( 'title-tag' );
   add_theme_support( 'html5', array( 'search-form', 'gallery', 'caption' ) );
   add_theme_support( 'post-thumbnails' );
-
-
 } );
-// Creación de Menus
+
 function menus(){
 	register_nav_menus(array(
-  'menu_principal' =>__('Menu Principal','Nuevavida')
+  'menu_principal' =>__('Menu Principal','Hecsel')
 ));
 }
 add_action( 'init', 'menus' );
-
 add_action( 'wp_enqueue_scripts', function() {
-
   $theme = wp_get_theme();
   $theme_ver = $theme->version;
-
    wp_enqueue_style( 'estilos',
     get_template_directory_uri().'/styles/estilos.css',
     array(),
     $theme_ver
   );
 
-  wp_enqueue_style( 'colorbox-styles',
-  get_template_directory_uri().'/styles/css/colorbox.css',
-  array(),
-  $theme_ver
-);
-
 
   wp_enqueue_style( 'aos',
   get_template_directory_uri().'/styles/aos.css',
   array(),
   $theme_ver
-);
-wp_enqueue_style( 'owlcarousel2',
-get_template_directory_uri().'/styles/owl.carousel.min.css',
-array(),
-$theme_ver
-);
-wp_enqueue_style( 'owlcarouseltheme',
-get_template_directory_uri().'/styles/owl.theme.default.min.css',
-array(),
-$theme_ver
-);
+  );
+  wp_enqueue_style( 'owlcarousel2',
+  get_template_directory_uri().'/styles/owl.carousel.min.css',
+  array(),
+  $theme_ver
+  );
+  wp_enqueue_style( 'owlcarouseltheme',
+  get_template_directory_uri().'/styles/owl.theme.default.min.css',
+  array(),
+  $theme_ver
+  );
 
 wp_enqueue_script("jquery");
 
@@ -78,12 +56,7 @@ false
   );
 
 
-  wp_enqueue_script( 'colorbox',
-    get_template_directory_uri().'/scripts/jquery.colorbox-min.js',
-    array( 'jquery' ),
-    $theme_ver,
-    false
-  );
+
   wp_enqueue_script( 'owl-carousel',
   get_template_directory_uri().'/scripts/owl.carousel.min.js',
   array( 'jquery' ),
@@ -116,12 +89,13 @@ add_filter('show_admin_bar','__return_false');
 
 function excerpt($num) {
   $limit = $num+1;
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  $excerpt = explode(' ', get_the_title(), $limit);
   array_pop($excerpt);
   $excerpt = implode(" ",$excerpt)."...";
   echo $excerpt;
   }
-  
+  add_image_size('destacada', 500, true);
+
   function content($num) {
   $theContent = get_the_content();
   $output = preg_replace('/<img[^>]+./','', $theContent);
@@ -130,8 +104,4 @@ function excerpt($num) {
   array_pop($content);
   $content = implode(" ",$content)."...";
   echo $content;
-  }
-
-  ?>
-
-
+  }?>

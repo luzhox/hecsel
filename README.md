@@ -2,35 +2,20 @@
 
 En este repositorio se encuentra el proyecto de hecsel
 
-## Getting Started
+## Indicaciones generales
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Este proyecto se basa en una plantilla creada 100% personalizada
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Para poder correr el proyecto es recomendable tener MAMP O XAMP.
+Además para correr los estilos se usa sass por lo cual se recomienda tener instalado tanto sass como npm y node para ejecutar los comandos
+
+### Comando para correr los estilos
 
 ```
-Give examples
+npm run style
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 

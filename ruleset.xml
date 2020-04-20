@@ -1,0 +1,14 @@
+ <!-- Lines can be N chars long (warnings), errors at M chars -->
+ <?xml version="1.0"?>
+   <ruleset name="MyStandard" namespace="MyProject\CS\Standard"> 
+ <description>A custom coding standard.</description>
+  <!--
+    Set different property values for fixing and checking.
+ -->
+ <rule ref="Generic.Files.LineLength">
+  <properties>
+   <property phpcs-only="true" name="lineLimit" value="150"/>
+   <property phpcbf-only="true" name="lineLimit" value="200"/>
+  </properties>
+ </rule>
+</ruleset>

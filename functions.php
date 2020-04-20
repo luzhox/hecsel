@@ -78,7 +78,7 @@ wp_enqueue_script( 'aos-script',
 
 } );
 function my_acf_init() {
-	
+
 	acf_update_setting('google_api_key', 'AIzaSyB2opgncJgWQkvibe4bVFb0AWAI2I7MSXw');
 }
 
@@ -89,7 +89,7 @@ add_filter('show_admin_bar','__return_false');
 
 function excerpt($num) {
   $limit = $num+1;
-  $excerpt = explode(' ', get_the_title(), $limit);
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
   array_pop($excerpt);
   $excerpt = implode(" ",$excerpt)."...";
   echo $excerpt;

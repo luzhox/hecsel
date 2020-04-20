@@ -13,7 +13,7 @@
       .formulario {
         width: col(37, 37);
 
-        @include desktop {
+        @include media(desktopmini) {
           width: col(15, 27);
         }
 
@@ -22,13 +22,13 @@
           flex-flow: wrap;
           .input-field {
             width: col(15, 15);
-            
-            @include tablet {
+
+            @include media(tablet) {
               width: col(7.25, 15);
             }
 
             &:nth-child(1) {
-              @include tablet {
+              @include media(tablet) {
                 margin-right: col(0.5, 15);
               }
             }
@@ -46,38 +46,36 @@
           padding: 20px 0px;
           border-radius: 8px;
           margin-top: 5px;
-          -webkit-transition: all .3s ease-in-out;
-          -moz-transition: all .3s ease-in-out;
-          -ms-transition: all .3s ease-in-out;
-          -o-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           cursor: pointer;
-          -webkit-transition: all .3s ease-in-out;
-          -moz-transition: all .3s ease-in-out;
-          -ms-transition: all .3s ease-in-out;
-          -o-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           appearance: none;
           -webkit-appearance: none;
           &:hover {
             background-color: $yellow;
-            box-shadow: 0px 0px 10px $yellow;;
-    
+            box-shadow: 0px 0px 10px $yellow;
           }
         }
       }
-   
     }
     .datos {
       display: flex;
       flex-flow: column;
       width: col(27, 27);
       padding-left: 10%;
-      @include tablet{
+      @include media(tablet) {
         padding-left: 0%;
-        flex-flow: row; 
+        flex-flow: row;
       }
-      @include desktop{
+      @include media(desktopmini) {
         width: col(10, 27);
         flex-flow: column;
         justify-content: center;
@@ -90,17 +88,16 @@
         margin-bottom: col(1, 10);
         max-width: 220px;
 
-       @include tablet{
-         width: col(14,29);
-         margin-bottom: 0;
-         
-       }
-       @include desktop{
-        width: col(29,29);
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-bottom: col(1, 10);
-       }
+        @include media(tablet) {
+          width: col(14, 29);
+          margin-bottom: 0;
+        }
+        @include media(desktopmini) {
+          width: col(29, 29);
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: col(1, 10);
+        }
 
         &:nth-child(2) {
           margin-bottom: 0px;
@@ -119,7 +116,7 @@
             color: $gray;
             font-family: $primary-text;
             letter-spacing: -0.6px;
-            @include desktop {
+            @include media(desktopmini) {
               font-size: 24px;
             }
           }
@@ -130,7 +127,7 @@
             letter-spacing: 0.4px;
             font-family: $primary-text;
             color: $gray;
-            @include desktop {
+            @include media(desktopmini) {
               font-size: 26px;
             }
           }
@@ -143,7 +140,7 @@
             color: $gray2;
             display: inline-block;
             margin-left: 12px;
-            @include desktop {
+            @include media(desktopmini) {
               margin: 0;
             }
           }

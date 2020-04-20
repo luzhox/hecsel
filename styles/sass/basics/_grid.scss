@@ -5,12 +5,11 @@
 $breakpoint-tablet: 744px;
 $breakpoint-desktop: 1240px;
 
-
 .row {
     margin-left: auto;
     margin-right: auto;
 }
-  
+
 .row:after {
     content: "";
     display: table;
@@ -23,39 +22,72 @@ $breakpoint-desktop: 1240px;
     box-sizing: border-box;
 }
 
-/// Show only on desktop screens
-@mixin desktop {
-    @media only screen and (min-width: $breakpoint-desktop){
-       @content;
-   }
+//Width column
+@function col($columns, $total) {
+    @return (100% / $total) * $columns;
 }
 
-/// Show on tablet screens
-@mixin tablet {
-    @media only screen and (min-width: ($breakpoint-tablet + 1)){
-       @content;
-   }
+//Breakpoints
+$xsmall-screen: 320px;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$xlarge-screen: 1190px;
+
+//Width column
+@function col($columns, $total) {
+    @return (100% / $total) * $columns;
 }
 
-/// Show only on mobile screens
-@mixin mobile {
-    @media only screen and (max-width: $breakpoint-tablet){
-       @content;
-   }
-}
+@mixin media($types...) {
+    @each $type in $types {
+        //only mobile or mobile down
+        @if $type == mobile {
+            @media only screen and (max-width: $medium-screen - 1) {
+                @content;
+            }
+        }
+        @if $type == mobile-tablet {
+            @media only screen and (min-width: $small-screen) {
+                @content;
+            }
+        }
+        //tableb up
+        @if $type == tablet {
+            @media only screen and (min-width: $medium-screen) {
+                @content;
+            }
+        }
 
-.container{
-    max-width: 296px;
-    margin: 0 auto;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: initial;
-    // @include clearfix;
-    @include tablet{
-        padding: 0 col(1, 37);
-        max-width: 1184px;
-        box-sizing: border-box;
+        //desktopmini up
+        @if $type == desktopmini {
+            @media only screen and (min-width: $large-screen) {
+                @content;
+            }
+        }
+        //desktop up
+        @if $type == desktop {
+            @media only screen and (min-width: $xlarge-screen) {
+                @content;
+            }
+        }
     }
-    
- 
- }  
+}
+.container {
+    width: 84%;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow: initial;
+    @include media(tablet) {
+        max-width: 592px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        width: 100%;
+    }
+    @include media(desktopmini) {
+        max-width: 888px;
+    }
+    @include media(desktop) {
+        max-width: 1184px;
+    }
+}

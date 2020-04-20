@@ -1,4 +1,4 @@
-.section-title{
+.section-title {
     font-weight: 300;
     font-size: 16px;
     line-height: 156%;
@@ -8,8 +8,8 @@
     color: $gray;
     display: block;
     margin-bottom: 8px;
-    &::after{
-        content:'';
+    &::after {
+        content: "";
         width: 76px;
         height: 1px;
         display: block;
@@ -18,19 +18,20 @@
         margin-top: 8px;
     }
 }
-h2{
+h2 {
     margin-top: 16px;
-    &.title p{
-        font-size: 28px;
-        line-height: 120%;
+    &.title p {
+        font-size: 26px;
+        line-height: 150%;
         text-align: center;
         color: $gray;
         font-weight: 300;
-        strong{
+        strong {
             font-weight: 700;
         }
-        @include tablet{
+        @include media(tablet) {
             font-size: 44px;
+            line-height: 120%;
         }
     }
 }

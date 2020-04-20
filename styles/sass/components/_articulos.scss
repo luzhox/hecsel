@@ -4,10 +4,10 @@
   margin-top: 60px;
   overflow: hidden;
   position: relative;
-  @include mobile{
-      max-height: 400px;
+  @include media(mobile) {
+    max-height: 400px;
   }
-  @include tablet {
+  @include media(tablet) {
     background-attachment: fixed !important;
     height: 514px;
     max-height: 100%;
@@ -22,7 +22,7 @@
     top: 0px;
     left: 0px;
     z-index: 1;
-    @include tablet {
+    @include media(tablet) {
       height: 98vh;
       max-height: 100%;
       margin-top: 0px;
@@ -32,7 +32,7 @@
       align-items: flex-end;
     }
 
-    @include desktop {
+    @include media(desktopmini) {
       background-position: center center !important;
       background-size: cover !important;
       text-align: left;
@@ -41,8 +41,8 @@
   .texto {
     background-size: cover !important;
     z-index: 999999;
-   
-    @include tablet {
+
+    @include media(tablet) {
       top: 0;
       left: 0;
       right: 0;
@@ -64,7 +64,6 @@
     flex-flow: column;
     -ms-flex-flow: column;
     height: 100%;
-    
 
     h1 {
       color: white;
@@ -73,7 +72,7 @@
       display: inline;
       font-weight: 500;
 
-      @include tablet {
+      @include media(tablet) {
         max-width: 100%;
         text-align: left;
         font-size: calc(20px + 24 * ((100vw - 320px) / 820));
@@ -90,7 +89,7 @@
       text-align: center;
       font-weight: 300;
       margin-top: 10px;
-      @include tablet {
+      @include media(tablet) {
         text-align: left;
       }
     }
@@ -106,20 +105,19 @@
       font-size: 16px;
       text-transform: uppercase;
       border-radius: 8px;
-      -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -ms-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       cursor: pointer;
       max-width: 230px;
       box-shadow: 0px 0px 20px $yellow;
       &:hover {
         background-color: $yellow;
         box-shadow: 0px 0px 10px $yellow;
-
       }
-      img{
+      img {
         height: 18px;
         width: auto;
         margin-left: 12px;
@@ -129,24 +127,23 @@
 }
 
 #articulos {
- 
-h2.title{
-  margin-top: 0px;
-}
+  h2.title {
+    margin-top: 0px;
+  }
   .container {
     margin-bottom: col(2, 31);
     padding-top: 0px;
     margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
-    @include tablet{
+    @include media(tablet) {
       margin-top: 0px;
       position: relative;
       top: -52px;
       z-index: 99;
       padding-bottom: 0px;
     }
-    .contenedor-articulos{
+    .contenedor-articulos {
       display: flex;
       flex-flow: wrap;
       justify-content: center;
@@ -159,45 +156,38 @@ h2.title{
       margin-left: auto;
       margin-right: auto;
       overflow: hidden;
-      -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -ms-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       box-shadow: 0px 0px 40px $gray4;
 
-      @include tablet{
+      @include media(tablet) {
         box-shadow: none;
         border: $gray4 1px solid;
-
       }
-      &:hover{
+      &:hover {
         border: none;
         box-shadow: 0px 0px 40px $gray4;
-
-
       }
 
-      @include tablet {
+      @include media(tablet) {
         margin-bottom: col(1, 27);
         width: col(13.4, 28);
         display: inline-block;
-      
       }
 
-      @include desktop {
+      @include media(desktopmini) {
         width: col(6.7, 23);
-
-     
-
       }
-      .post-categories{
-        li{
-        a{
-          text-decoration: none;
-          font-size: 12px;
+      .post-categories {
+        li {
+          a {
+            text-decoration: none;
+            font-size: 12px;
+          }
         }
-      }
       }
       .textos {
         padding: col(1, 7);
@@ -237,7 +227,7 @@ h2.title{
         }
 
         p {
-          color:$gray2;
+          color: $gray2;
           letter-spacing: 0.2px;
           min-height: 45px;
           margin: col(1, 14) auto;
@@ -255,7 +245,6 @@ h2.title{
           display: block;
           font-weight: 900;
         }
-        
       }
 
       .imagen-article {

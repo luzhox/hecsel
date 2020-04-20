@@ -1,32 +1,28 @@
-
 @charset "UTF-8";
 
-@import 'basics/_generics';
-@import 'basics/_typo';
-@import 'basics/_buttons';
-@import 'components/_menu';
-@import 'components/_articulo';
-@import 'components/_articulos';
-@import 'components/_form';
-@import 'components/_maps';
-@import 'components/_miembros-hecsel';
-@import 'components/_twitter';
-@import 'components/_modal';
-@import 'components/_footer';
-@import 'components/_products-home';
-@import 'components/_projects-home';
-@import 'components/_service-home';
-@import 'components/_nosotros-home';
-@import 'components/_sponsors';
-@import 'components/_hero';
-@import 'components/enginer-solutions'
-
-
-
-
-
-
-
-
-
-
+@import "basics/_generics";
+@import "basics/_typo";
+@import "basics/_buttons";
+@import "basics/_404";
+@import "components/_menu";
+@import "components/_articulo";
+@import "components/_articulos";
+@import "components/_form";
+@import "components/_maps";
+@import "components/_miembros-hecsel";
+@import "components/_twitter";
+@import "components/_modal";
+@import "components/_footer";
+@import "components/_products-home";
+@import "components/_projects-home";
+@import "components/_service-home";
+@import "components/_nosotros-home";
+@import "components/_sponsors";
+@import "components/_hero";
+@import "components/_hero-service";
+@import "components/_hero-product";
+@import "components/_product-detail";
+@import "components/_product-interest";
+@import "components/_our-services";
+@import "components/_enginer-solutions";
+@import "components/_asked-questions";

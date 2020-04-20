@@ -5,9 +5,9 @@
         </div>
         <div class="img">
         <?php $image = get_sub_field('imagen');   
-            if( $image): ?>
-            <img src="<?php echo esc_url($image['url']);?>" alt="<?php echo esc_url($image['alt']);?>" />
-            <?php endif; ?>
+        if($image) : ?>
+            <img src="<?php echo esc_url($image['url']);?>" title="<?php echo ($image['title']);?>" alt="<?php echo ($image['alt']);?>" />
+        <?php endif; ?>
         </div>
     </div>
 </section>

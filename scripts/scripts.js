@@ -128,19 +128,18 @@ $(document).ready(function () {
   $('.arrowNext').click(function () {
     owl.trigger('next.owl.carousel');
   })
-  // Go to the previous item
   $('.arrowPrev').click(function () {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
   })
   addCarousel('products-home__container', 0, 1, false, 16, 3, false, false, true, false, 3000, '', '', true, '', '', 32);
   addCarousel('projects-home__container', 0, 1, true, 16, 4, false, false, true, false, 3000, '', '', true, '', '', 32);
   addCarousel('service-home__container', 0, 1, true, 16, 4, false, false, true, false, 3000, '', '', true, '', '', 32);
   addCarousel('sponsors__container', 0, 2, true, 16, 4, false, false, true, false, 3000, '', '', true, '', '', 32);
-
+  addCarousel('our-services__container', 0, 1,true,16,6,false,false,true,false,3000,'','',true,1,false,32);
+  addCarousel('asked-question__container', 0, 1,true,16,3,false,false,true,false,3000,'','',true,1,false,16);
   addCarousel('slider-members', 0, 1, true, 16, 4, false, false, true, false, 3000, '', '', true, '', '', 32);
   addCarousel('enginer-solutions_carousel', 0, 1, true, 0, 1, false, false, false, false, 3000, '', '', false, '', '', 0);
+  
   var owl = $('.enginer-solutions_carousel');
   owl.on('changed.owl.carousel', function (event) {
     console.log(event.item.index)
@@ -218,4 +217,17 @@ $(document).ready(function () {
     document.querySelector('#modalMiembro .modal-content .imagen').style.background = 'url(' + image + `)`
     $('#modalMiembro').addClass('active')
   })
+
+  $('.asked-question__container__item').click(function (e) {
+    var title = $(this).find('.question').html()
+    var contenido = $(this).find('.member__answer').html()
+    var image = $(this).find("img").attr('src');
+
+    $('#modalQuestion .modal-content .text h3').html(title)
+    $('#modalQuestion .modal-content .text .contenido-bio').html(contenido)
+    document.querySelector('#modalQuestion .modal-content .imagen').style.background = 'url(' + image + `)`
+    $('#modalQuestion').addClass('active')
+  })
+
+
 });

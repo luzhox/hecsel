@@ -1,17 +1,17 @@
-.nosotros-home{
+.nosotros-home {
     text-align: center;
     padding: 48px 0px;
     color: white;
     position: relative;
     overflow: hidden;
-    @include tablet{
+    @include media(tablet) {
         border: 0px;
         margin-top: 0px;
         padding: 0px;
         padding: 32px 0px;
     }
 
-    .overlay{
+    .overlay {
         background: #111215;
         opacity: 0.86;
         position: absolute;
@@ -19,42 +19,41 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transition: ease-in-out .3s all;
-        
+        transition: ease-in-out 0.3s all;
     }
-    .section-title{
+    .section-title {
         color: white;
     }
-    h2.title p{
-        color: white;
-       @include desktop{
-        max-width: 800px;
-        margin: 0 auto;
+    h2.title p {
         color: white;
 
-       }
+        @include media(desktopmini) {
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+        }
     }
- 
-    .container{
+
+    .container {
         padding-left: 0px;
         padding-right: 0px;
         position: relative;
-        z-index:2;
-        @include mobile{
+        z-index: 2;
+        @include media(mobile) {
             max-width: 312px;
         }
     }
-    &__container{
+    &__container {
         margin: 0 auto;
         display: flex;
         flex-flow: wrap;
         align-items: center;
         justify-content: center;
-       @include tablet{
-        width: col(29,37);
-       }
-    
-        &__item{
+        @include media(tablet) {
+            width: col(29, 37);
+        }
+
+        &__item {
             display: flex;
             flex-flow: row;
             cursor: pointer;
@@ -65,52 +64,52 @@
             border-radius: 16px;
             position: relative;
             margin-top: 32px;
-            @include tablet{
-                width: col(9,29);
+            @include media(tablet) {
+                width: col(9, 29);
                 margin-top: 0px;
-                margin-right: col(1,29);
+                margin-right: col(1, 29);
                 height: 192px;
             }
-            &:last-child{
+            &:last-child {
                 margin-right: 0px;
             }
-            img{
-                width: 72px!important;
+            img {
+                width: 72px !important;
                 height: auto;
                 margin: 0 auto;
             }
-         
-            span{
+
+            span {
                 font-size: 12px;
                 line-height: 156%;
                 margin-left: 36px;
                 text-transform: uppercase;
-                padding:4px 16px;
+                padding: 4px 16px;
                 margin-top: 16px;
                 border-radius: 4px;
             }
-            .text{
+            .text {
                 position: relative;
                 z-index: 2;
                 text-align: left;
                 margin-left: 16px;
-                @include tablet{
+                @include media(tablet) {
                     margin-left: 0px;
                 }
-                h3{
+                h3 {
                     font-size: 48px;
                     line-height: 100%;
                     text-transform: uppercase;
-                    color: $yellow;}
-                p{
+                    color: $yellow;
+                }
+                p {
                     font-size: 16px;
                     line-height: 100%;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     text-align: left;
                     margin-top: 8px;
                 }
             }
-           
         }
     }
 }

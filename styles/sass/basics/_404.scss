@@ -1,0 +1,38 @@
+.error404 {
+    #contenido {
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        padding: col(2, 37);
+        justify-content: center;
+        #post-404 {
+            display: flex;
+            display: flexbox;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 230px;
+                height: auto;
+                margin-bottom: 16px;
+                margin-right: 24px;
+                @include media(tablet) {
+                    max-width: 280px;
+                }
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 300;
+                color: $gray2;
+                text-align: center;
+                @include media(tablet) {
+                    font-size: 1.6rem;
+                }
+            }
+            a {
+                margin-top: 32px;
+                display: inline-block;
+            }
+        }
+    }
+}

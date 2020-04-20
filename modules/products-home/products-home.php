@@ -10,7 +10,7 @@
                 <h3 class="title"><?php the_sub_field('title')?></h3>
                 <?php  $image = get_sub_field('imagen');
                 if($image): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img src="<?php echo esc_url($image['url']); ?>" title="<?php echo ($image['title']);?>" alt="<?php echo ($image['alt']);?>" />
                 <?php endif; ?>
             </a>
 

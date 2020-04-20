@@ -1,18 +1,27 @@
-.btn{
+.btn {
     padding: 16px 48px;
     border-radius: 8px;
     display: inline-block;
-    font-size: 18px;
-    &__primary{
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &__primary {
         @extend .btn;
         background-color: $yellow;
         color: $gray2;
-        font-size: 16px;
         line-height: 156%;
         text-transform: uppercase;
         font-weight: 800;
-        &:hover{
+        &:hover {
             box-shadow: 0px 4px 24px $yellow;
+        }
+        &--border {
+            @extend .btn;
+            color: white;
+            border: 1px solid $yellow;
         }
     }
 }

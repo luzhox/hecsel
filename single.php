@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php include('menu.php')?>
+
 <style>
 #menu-item-172{
 	border-bottom:1px solid #e4a513!important;

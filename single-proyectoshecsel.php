@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php include('menu.php')?>
+
 <style>
 #menu-item-172{
 	border-bottom:1px solid #e4a513!important;
@@ -20,7 +22,7 @@
 			</div>
 
 			<div class="aside">
-			<h3 class="title">Eventos pasados</h3>
+			<h3 class="title">Artículos Recientes</h3>
 
 
 			<?php $noticia = get_field('articulo_destacados'); 
@@ -35,9 +37,9 @@
 				<?php endif; ?>
 					<div class="ultimasnoticias">
 					<?php $args = array(
-						'post_type' => 'eventos',
+						'post_type'=>'proyectoshecsel',
 						 'posts_per_page'=> 3,
-            			'orderby'=> 'date',
+            'orderby'=> 'date',
 				    'order'=>'DESC'); ?>
 
 				  <?php $family = new WP_Query($args);?>

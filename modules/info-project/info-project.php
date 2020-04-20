@@ -23,7 +23,7 @@
                 <?php $image = get_sub_field('imagen');   
                     if( $image): ?>
                     <div class="img">
-                    <img src="<?php echo esc_url($image['url']);?>" alt="<?php echo esc_url($image['alt']);?>" />
+                    <img src="<?php echo esc_url($image['url']);?>" title="<?php echo ($image['title']);?>" alt="<?php echo ($image['alt']);?>" />
                     </div>
                     <?php endif; ?>
                     <p><?php the_sub_field('nombre_del_producto')?></p>

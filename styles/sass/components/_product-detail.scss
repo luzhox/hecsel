@@ -1,0 +1,96 @@
+.product-detail {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    padding: 64px 0px;
+    @include media(desktop) {
+      padding: 64px 32px;
+    }
+  }
+  &__buttons {
+    margin-bottom: 32px;
+    button {
+      padding: 8px 16px;
+      margin-right: 8px;
+      color: $gray;
+      @include media(tablet) {
+        padding: 8px 20px;
+      }
+    }
+    a {
+      color: $gray;
+      padding: 8px 16px;
+      @include media(tablet) {
+        padding: 8px 20px;
+      }
+    }
+    @include media(desktop) {
+      margin-bottom: 0px;
+    }
+  }
+  &__text {
+    h3 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+      color: $gray;
+      @include media(tablet) {
+        font-size: 44px;
+        line-height: 130%;
+      }
+    }
+    p {
+      font-family: $roboto;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+      color: $gray;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+    @include media(desktop) {
+      width: col(13, 35);
+    }
+  }
+  &__img {
+    @include media(desktop) {
+      width: col(18, 35);
+      margin-left: col(3, 35);
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__breadcrumb {
+    list-style: none;
+    font-size: 16px;
+    line-height: 156%;
+    margin-bottom: 16px;
+    &::after {
+      content: "";
+      width: 76px;
+      height: 1px;
+      display: block;
+      background-color: $yellow;
+      margin-top: 16px;
+    }
+    li {
+      font-family: $primary-text;
+      display: inline-block;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.085em;
+      color: rgba(29, 30, 33, 0.6);
+      a {
+        font-weight: 300;
+        color: rgba(29, 30, 33, 0.6);
+        letter-spacing: 0.085em;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

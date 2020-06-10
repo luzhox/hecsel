@@ -1,11 +1,14 @@
 .product-detail {
+  overflow: hidden;
   .container {
     display: flex;
     align-items: center;
     flex-flow: wrap;
     padding: 64px 0px;
+    padding-bottom: 0px;
     @include media(desktop) {
       padding: 64px 32px;
+      padding-bottom: 0px;
     }
   }
   &__buttons {
@@ -51,6 +54,7 @@
     }
     @include media(desktop) {
       width: col(13, 35);
+      margin-bottom: 64px;
     }
   }
   &__img {
@@ -61,6 +65,8 @@
     img {
       width: 100%;
       height: auto;
+      position: relative;
+      top: 4px;
     }
   }
   &__breadcrumb {
@@ -83,6 +89,7 @@
       text-transform: uppercase;
       letter-spacing: 0.085em;
       color: rgba(29, 30, 33, 0.6);
+      font-size: 14px;
       a {
         font-weight: 300;
         color: rgba(29, 30, 33, 0.6);

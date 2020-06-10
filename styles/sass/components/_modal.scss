@@ -82,16 +82,34 @@
           flex-flow: row;
         }
       }
+      .header_modal p {
+        font-size: 20px;
+        margin-top: 32px;
+        margin-left: 8px;
+        strong {
+          font-weight: 600;
+          display: block;
+          margin-bottom: 16px;
+        }
+        @include media(tablet) {
+          font-size: 28px;
+        }
+      }
       .group-form-2 {
         @include media(mobile) {
           width: 100%;
         }
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 36px;
       }
       .input-field {
         min-height: 48px;
         height: 48px;
         margin-top: 0px;
         margin-bottom: 16px;
+        margin-left: 8px;
       }
       .input-textarea {
         height: auto;
@@ -99,24 +117,50 @@
         textarea {
           min-height: 130px;
           resize: none;
+          border: 1px solid #dddee2;
+          width: calc(100% - 8px);
+          margin-left: 8px;
+          border-radius: 6px;
+          padding: 16px;
+          font-size: 16px;
+          height: 120px;
           @media only screen and (max-width: 321px) {
             min-height: 120px;
           }
           @include media(tablet) {
-            min-height: 182px;
+            min-height: 100px;
           }
         }
       }
       .btn-submit {
         input {
           margin-bottom: 0px;
-
+          margin-left: 8px;
+          float: right;
+          font-weight: 600;
           @include media(tablet) {
             width: auto;
             display: inline-block;
             padding: 16px 32px;
           }
         }
+      }
+      div.wpcf7-response-output {
+        border: 0px;
+        position: relative;
+        top: -32px;
+        left: 0.8px;
+        font-size: 14px;
+      }
+      span.wpcf7-not-valid-tip {
+        color: #f00;
+        font-size: 1em;
+        font-weight: normal;
+        display: block;
+        position: absolute;
+        top: 18%;
+        right: 10px;
+        font-size: 12px;
       }
     }
   }
@@ -128,7 +172,8 @@
       animation: fadein 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
     .modal-container {
-      -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      -webkit-animation: scale-in-center 0.5s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }

@@ -18,11 +18,14 @@
 				<div class="textos">
 					<h1 data-aos="fade-up" data-aos-offset="100"><?php the_title();?></h1>
 					<div class="texto-articulo" data-aos="fade-up" data-aos-offset="100"><?php the_content();?></div>
+					<button class="btn__primary cotiza">
+						Cotiza ahora
+					</button>
 				</div>
 			</div>
 
 			<div class="aside">
-			<h3 class="title">Otros proyectos:</h3>
+			<h3 class="title">Otros servicios:</h3>
 
 
 			<?php $noticia = get_field('articulo_destacados'); 
@@ -37,7 +40,7 @@
 				<?php endif; ?>
 					<div class="ultimasnoticias">
 					<?php $args = array(
-						'post_type'=>'proyectoshecsel',
+						'post_type'=>'servicios_hecsel',
 						 'posts_per_page'=> 3,
             'orderby'=> 'date',
 				    'order'=>'DESC'); ?>
@@ -59,6 +62,18 @@
 			</div>
 			</div></div>
 			<?php endwhile; ?>
+
+<section class="modal" id="modalCotiza">
+            <div class="overlay"></div>
+            <div class=" modal-container">
+                <div class="modal-content">
+                        <div class="header_modal">
+                        <?php the_field('form')?>
+                        </div>
+                    </div>
+                <button class="close" data-modal="modalCotiza"></button>
+                </div>
+ </section>
 <style>
 
 .btn__whastapp {

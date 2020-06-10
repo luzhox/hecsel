@@ -49,5 +49,26 @@
 				</div>
 		</div>
 </section>
+<style>
+
+.btn__whastapp {
+  width: 58px;
+  position: fixed;
+  right: 37px;
+  bottom: 44px;
+  z-index: 9999;
+  height: 58px;
+  border-radius: 50%;
+
+
+}
+@media only screen and (min-width:768px){
+  .btn__whastapp{
+    right:60px;
+    bottom: 54px;
+  }
+}
+
+</style>
 
   <?php get_footer(); ?>

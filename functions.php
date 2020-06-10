@@ -87,6 +87,29 @@ add_action('acf/init', 'my_acf_init');
 add_filter('show_admin_bar','__return_false');
 
 
+
+function mk_list_child_pages() { 
+ 
+global $post; 
+ 
+if ( is_page() && $post->post_parent )
+ 
+    $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+else
+    $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+ 
+if ( $childpages ) {
+ 
+    $string = '<ul class="lecciones">' . $childpages . '</ul>';
+}
+ 
+return $string;
+ 
+}
+ 
+add_shortcode('lecciones', 'mk_list_child_pages');
+
+
 function excerpt($num) {
   $limit = $num+1;
   $excerpt = explode(' ', get_the_excerpt(), $limit);
@@ -104,4 +127,28 @@ function excerpt($num) {
   array_pop($content);
   $content = implode(" ",$content)."...";
   echo $content;
-  }?>
+  }
+  add_filter( 'posts_where', function ( $where, \WP_Query $q ) use ( &$wpdb )
+{
+    if ( true !== $q->get( 'wpse_include_parent' ) )
+        return $where;
+
+    /**
+     * Get the value passed to from the post parent and validate it
+     * post_parent only accepts an integer value, so we only need to validate
+     * the value as an integer
+     */
+    $post_parent = filter_var( $q->get( 'post_parent' ), FILTER_VALIDATE_INT );
+    if ( !$post_parent )
+        return $where;
+
+    /** 
+     * Lets also include the parent in our query
+     *
+     * Because we have already validated the $post_parent value, we 
+     * do not need to use the prepare() method here
+     */
+    $where .= " OR $wpdb->posts.ID = $post_parent";
+
+    return $where;
+}, 10, 2 );?>

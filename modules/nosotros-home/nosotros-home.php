@@ -6,11 +6,7 @@
 
         <?php if( have_rows('nosotros') ) {while( have_rows('nosotros') ) { the_row();  ?>
 
-            <a class="nosotros-home__container__item" href="<?php the_sub_field('link_de_service')?>" >
-                <img src="<?php the_sub_field('imagen')?>" alt="">
-                <div class="text">
-                <?php the_sub_field('title')?>
-                </div>
+            <a class="nosotros-home__container__item"><img src="<?php the_sub_field('imagen')?>" alt="Hecsel - Ingeniería y mantención"><div class="text"><?php the_sub_field('title')?></div>
             </a>
 
             <?php }} ?>
